@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour
         bool isMoved = moveInput.x != 0 || moveInput.y !=0;
         if ( moveInput.x != 0 ) playerRenderer.SpriteFlipX(moveInput.x);
         playerRenderer.OnMovement(isMoved ? 1 : 0);
+        //먼지 효과 재생
+        playerRenderer.OnFootStepEffect(isMoved);
         moveman2D.MoveTo(moveInput);
     }
 

@@ -615,6 +615,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerRenderer
   playerModel: {fileID: 1002312527}
+  footStepEffect: {fileID: 1688117281}
 --- !u!95 &812714590
 Animator:
   serializedVersion: 7
