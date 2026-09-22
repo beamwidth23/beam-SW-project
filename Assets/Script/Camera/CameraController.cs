@@ -11,7 +11,7 @@ public class CameraController : MonoBehaviour
 
         position.x = Mathf.Clamp(position.x, stageData.CameraLimitMin.x,
             stageData.CameraLimitMax.x);
-        position.y = Mathf.Clamp(position.y, stageData.cameraLimitMin.y,
+        position.y = Mathf.Clamp(position.y, stageData.CameraLimitMin.y,
             stageData.CameraLimitMax.y);
 
         transform.position = position;
