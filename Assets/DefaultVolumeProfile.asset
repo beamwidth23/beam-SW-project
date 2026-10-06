@@ -322,9 +322,12 @@ MonoBehaviour:
   highQualityFiltering:
     m_OverrideState: 1
     m_Value: 0
+<<<<<<< HEAD
   filter:
     m_OverrideState: 1
     m_Value: 0
+=======
+>>>>>>> 9a96f984d014df9fb86685c45e00ebf704c98260
   downscale:
     m_OverrideState: 1
     m_Value: 0
