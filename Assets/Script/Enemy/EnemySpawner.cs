@@ -12,9 +12,13 @@ private GameObject[] enemyPrefabs;
 private Transform parentTransform;
 [SerializeField]
 private int enemyCount = 10;
+[SerializeField]
+private EntityBase target;
 
 private Vector3 offset = new Vector3(0.5f, 0.5f, 0);
 private List<Vector3> possibleTiles = new List<Vector3>();
+
+public static List<EntityBase> Enemies { get; private set; } = new List<EntityBase>();
 
 private void Awake()
 {
@@ -32,6 +36,8 @@ int index = Random.Range(0, possibleTiles.Count);
 GameObject clone = Instantiate(enemyPrefabs[type], possibleTiles[index],
 Quaternion.identity, transform);
 clone.GetComponent<EnemyBase>().Initialize(parentTransform);
+clone.GetComponent<EnemyFSM>().Setup(target);
+Enemies.Add(clone.GetComponent<EntityBase>());
 }
 }
 

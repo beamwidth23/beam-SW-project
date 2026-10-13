@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
         playerRenderer.OnFootStepEffect(playerBase.IsMoved);
         
         moveman2D.MoveTo(moveInput);
+        playerRenderer.LookRotation(playerBase);
     }
 
     public void OnMove(InputAction.CallbackContext context)

@@ -4,6 +4,8 @@ public class PlayerRenderer : MonoBehaviour
 {
     [SerializeField]
     private Transform playerModel;
+    [SerializeField]
+    private Transform playerArmsModel;
 
     [SerializeField]
     private ParticleSystem footStepEffect;
@@ -33,4 +35,22 @@ public class PlayerRenderer : MonoBehaviour
     {
         footEmission.rateOverTime = isMoved == true ? 20 : 0;
     }
+
+    public void LookRotation(PlayerBase playerBase)
+    {
+        if (playerBase.IsMoved == true)
+        {
+            playerArmsModel.rotation = Quaternion.identity;
+        
+        }
+        else
+        {
+            if ( playerBase.Target == null ) return;
+            Vector3 target = playerBase.Target.MiddlePoint;
+            float flip = target.x - transform.position.x < 0 ? -1 : 1;
+            SpriteFlipX(flip);
+            playerArmsModel.rotation = Utils.RotateToTarget(playerArmsModel.position, target, (1-flip) * 90);
+        }
+    }
 }
+
