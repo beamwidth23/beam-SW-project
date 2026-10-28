@@ -268,5 +268,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4e16bd5dd9c9424387225735d90780a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIHP
-  image: {fileID: 0}
+  image: {fileID: 4501094845218612349}
   entity: {fileID: 0}

@@ -22,6 +22,7 @@ public static List<EntityBase> Enemies { get; private set; } = new List<EntityBa
 
 private void Awake()
 {
+Enemies.Clear();
 
 tilemap.CompressBounds();
 

@@ -148,7 +148,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.15, z: 0}
   m_LocalScale: {x: 1, y: 1.212, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 160313934}
   m_Father: {fileID: 1002312527}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &84373669
@@ -210,6 +211,37 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &160313933
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 160313934}
+  m_Layer: 0
+  m_Name: SkillSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &160313934
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160313933}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.34, y: 0.055, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 84373668}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &278819045
 GameObject:
   m_ObjectHideFlags: 0
@@ -846,6 +878,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerRenderer
   playerModel: {fileID: 1002312527}
+  playerArmsModel: {fileID: 84373668}
   footStepEffect: {fileID: 1688117281}
 --- !u!95 &812714590
 Animator:
@@ -13887,6 +13920,8 @@ GameObject:
   - component: {fileID: 1982394066}
   - component: {fileID: 1982394070}
   - component: {fileID: 1982394071}
+  - component: {fileID: 1982394073}
+  - component: {fileID: 1982394072}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -14099,13 +14134,58 @@ MonoBehaviour:
   stats:
     level: 1
     exp: 0
-    damage: 25
-    cooldownTime: 2.5
-    criticalChance: 0.05
-    criticalMultiplier: 2
-    currentHP: 100
-    maxHP: 100
-    evasion: 0.05
+    currentHP:
+      statType: 4
+      maxValue: 99999
+      minValue: 0
+      defaultValue: 100
+      bonusValue: 0
+    stats:
+    - statType: 0
+      maxValue: 99999
+      minValue: 0
+      defaultValue: 25
+      bonusValue: 0
+    - statType: 1
+      maxValue: 10
+      minValue: 0.1
+      defaultValue: 2.5
+      bonusValue: 0
+    - statType: 2
+      maxValue: 1
+      minValue: 0
+      defaultValue: 0.1
+      bonusValue: 0
+    - statType: 3
+      maxValue: 100
+      minValue: 1.2
+      defaultValue: 1.5
+      bonusValue: 0
+    - statType: 4
+      maxValue: 99999
+      minValue: 100
+      defaultValue: 500
+      bonusValue: 0
+    - statType: 5
+      maxValue: 1
+      minValue: 0
+      defaultValue: 0.05
+      bonusValue: 0
+    - statType: 6
+      maxValue: 3
+      minValue: 0
+      defaultValue: 0
+      bonusValue: 0
+    - statType: 7
+      maxValue: 9999
+      minValue: 0
+      defaultValue: 0
+      bonusValue: 0
+    - statType: 8
+      maxValue: 4
+      minValue: 1
+      defaultValue: 1
+      bonusValue: 0
   middlePoint: {fileID: 636669629}
   targetMark: {fileID: 1765339988}
 --- !u!70 &1982394071
@@ -14145,6 +14225,33 @@ CapsuleCollider2D:
   m_Offset: {x: -0.07, y: 0.65}
   m_Size: {x: 1.1, y: 1.5}
   m_Direction: 0
+--- !u!114 &1982394072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982394064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19cc4d8849263b042994d3165ee2abc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SkillSystem
+  skillGad: {fileID: 1982394073}
+  skillSpawnPoint: {fileID: 160313934}
+--- !u!114 &1982394073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982394064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad1633e8e1e73eb459b84ca9623a8c58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SkillGad
+  projectile: {fileID: 6964096296723619044, guid: 9e20432a84831444ba6ad57f222ab6a2, type: 3}
 --- !u!1 &2111758295
 GameObject:
   m_ObjectHideFlags: 0

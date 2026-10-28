@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 
 [System.Serializable]
@@ -7,15 +8,15 @@ public struct EntityStats
     public int level;
     public long exp;
 
-    [Header("Attack")]
-    public float damage;
-    public float cooldownTime;
-    public float criticalChance;
-    public float criticalMultiplier;
+    [Header("Current HP")]
+    [SerializeField]
+    private Stat currentHP;
 
-    [Header("Defense")]
-    public float currentHP;
-    public float maxHP;
-    public float evasion;
+    [Header("Stats")]
+    [SerializeField]
+    private Stat[] stats;
 
+    public readonly Stat CurrentHP => currentHP;
+    public readonly Stat GetStat(Stat stat) => stats.FirstOrDefault(s => s.StatType == stat.StatType);
+    public readonly Stat GetStat(StatType statType) => stats.FirstOrDefault(s => s.StatType == statType);
 }

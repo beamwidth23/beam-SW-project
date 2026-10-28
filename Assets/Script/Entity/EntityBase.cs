@@ -3,29 +3,32 @@ using UnityEngine;
 public class EntityBase : MonoBehaviour
 {
     [SerializeField]
-    protected EntityStats stats;
+    private EntityStats stats;
     [SerializeField]
     private Transform middlePoint;
 
     public EntityStats Stats => stats;
-    public bool IsDead => stats.currentHP <= 0;
+    public bool IsDead => Stats.CurrentHP != null && Mathf.Approximately(Stats.CurrentHP.DefaultValue, 0f);
     public Vector3 MiddlePoint => middlePoint != null ? middlePoint.position : Vector3.zero;
     public EntityBase Target { get; set; }
 
     protected virtual void Setup()
     {
-        stats.currentHP = stats.maxHP;
+        Stats.CurrentHP.DefaultValue = Stats.GetStat(StatType.HP).Value;
     }
+
     public void TakeDamage(float damage)
     {
         if ( IsDead ) return;
 
-        stats.currentHP = stats.currentHP - damage > 0 ?
-            stats.currentHP - damage : 0;
+        // Evasion 스탯 확률로 공격 회피
+        if ( Random.value < Stats.GetStat(StatType.Evasion).Value ) return;
 
-        if (stats.currentHP <= 0)
+        Stats.CurrentHP.DefaultValue -= damage;
+
+        if ( Mathf.Approximately(Stats.CurrentHP.DefaultValue, 0f) )
         {
-
+            
         }
     }
 }
