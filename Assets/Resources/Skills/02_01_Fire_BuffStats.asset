@@ -10,18 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ecd457d0acf50bb4bb6fff089ab41237, type: 3}
-  m_Name: Skill_01_AttackDamage
+  m_Name: 02_01_Fire_BuffStats
   m_EditorClassIdentifier: Assembly-CSharp::SkillTemplate
-  skillName: "\uACF5\uACA9\uB825 \uAC15\uD654"
+  skillName: Buff (Fire)
   skillType: 0
   element: 1
-  maxLevel: 5
-  description: "\uAE30\uBCF8 \uACF5\uACA9\uB825 +25"
+  maxLevel: 10
+  description: "\uC77C\uBC18 \uACF5\uACA9\uC758 \uACF5\uACA9\uB825 \uC99D\uAC00"
   enableIcon: {fileID: 21300000, guid: 98810c7037dd7564f8bac5d625132283, type: 3}
   disableIcon: {fileID: 21300000, guid: 07affd5d69ed24b49ab894273260e9d4, type: 3}
   buffStatList:
   - statType: 0
-    maxValue: 100
+    maxValue: 0
     minValue: 0
     defaultValue: 25
     bonusValue: 0
+  attackBaseStats: []
+  attackBuffStats: []
+  projectile: {fileID: 0}

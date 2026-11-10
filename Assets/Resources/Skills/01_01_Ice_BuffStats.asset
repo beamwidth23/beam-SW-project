@@ -10,24 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ecd457d0acf50bb4bb6fff089ab41237, type: 3}
-  m_Name: Skill_02_Critical
+  m_Name: 01_01_Ice_BuffStats
   m_EditorClassIdentifier: Assembly-CSharp::SkillTemplate
-  skillName: "\uCE58\uBA85\uD0C0"
+  skillName: Buff (Ice)
   skillType: 0
-  element: 1
-  maxLevel: 5
-  description: "\uD06C\uB9AC\uD2F0\uCEEC \uD655\uB960 +10%\n\uD06C\uB9AC\uD2F0\uCEEC
-    \uACC4\uC218 +50%"
+  element: 0
+  maxLevel: 10
+  description: "\uC77C\uBC18 \uACF5\uACA9\uC758 \uD06C\uB9AC\uD2F0\uCEEC \uD655\uB960 \uC99D\uAC00\n\uC77C\uBC18 \uACF5\uACA9\uC758 \uD06C\uB9AC\uD2F0\uCEEC \uACF5\uACA9\uB825 \uC99D\uAC00"
   enableIcon: {fileID: 21300000, guid: 9a8468ea9cda6c14fb212982d11cdbcb, type: 3}
   disableIcon: {fileID: 21300000, guid: 69f5585536df8704bb091055a589cca2, type: 3}
   buffStatList:
   - statType: 2
-    maxValue: 1
+    maxValue: 0
     minValue: 0
-    defaultValue: 0.1
+    defaultValue: 0.09
     bonusValue: 0
   - statType: 3
-    maxValue: 1
+    maxValue: 0
     minValue: 0
-    defaultValue: 0.5
+    defaultValue: 0.2
     bonusValue: 0
+  attackBaseStats: []
+  attackBuffStats: []
+  projectile: {fileID: 0}

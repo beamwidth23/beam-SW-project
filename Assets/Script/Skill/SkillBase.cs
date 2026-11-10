@@ -59,8 +59,9 @@ public abstract class SkillBase
 
     public void IsSkillAvailable()
     {
-        // 레벨이 0이거나 버프 또는 지속 스킬이라면 사용할 수 있는 상태 아님
-        if ( CurrentLevel == 0 || SkillType == SkillType.Buff ) return;
+        // 레벨이 0이거나 버프 또는 지속 스킬이라면 스킬 사용 가능 상태 아님
+        if ( CurrentLevel == 0 || SkillType == SkillType.Buff
+             || SkillType == SkillType.Sustained ) return;
 
         if ( Time.time - currentCooldownTime >
              GetStat(StatType.CooldownTime).Value )

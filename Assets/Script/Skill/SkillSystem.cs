@@ -30,6 +30,8 @@ public class SkillSystem : MonoBehaviour
                 skill = new SkillBuff();
             else if ( item.Value.skillType.Equals(SkillType.Emission) )
                 skill = new SkillEmission();
+            else if ( item.Value.skillType.Equals(SkillType.Sustained) )
+                skill = new SkillSustained();
 
             if ( skill == null ) continue;
 

@@ -10,18 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ecd457d0acf50bb4bb6fff089ab41237, type: 3}
-  m_Name: Skill_00_AttackSpeed
+  m_Name: 03_01_Wind_BuffStats
   m_EditorClassIdentifier: Assembly-CSharp::SkillTemplate
-  skillName: "\uACF5\uACA9\uC18D\uB3C4 \uAC15\uD654"
+  skillName: Buff (Wind)
   skillType: 0
   element: 2
-  maxLevel: 5
-  description: "\uAE30\uBCF8 \uACF5\uACA9\uC18D\uB3C4 +15%"
+  maxLevel: 10
+  description: "\uC77C\uBC18 \uACF5\uACA9\uC758 \uCFE8\uD0C0\uC784 \uAC10\uC18C\n\uC77C\uBC18 \uACF5\uACA9\uC758 \uC804\uC774 \uD69F\uC218 \uC99D\uAC00"
   enableIcon: {fileID: 21300000, guid: de161187ca8ce874b9be123ca1e6fd1c, type: 3}
   disableIcon: {fileID: 21300000, guid: 0270f49e3d5746e40a883ca07820af6d, type: 3}
   buffStatList:
   - statType: 1
     maxValue: 0
-    minValue: -10
-    defaultValue: -0.3
+    minValue: 0
+    defaultValue: -0.2
     bonusValue: 0
+  - statType: 6
+    maxValue: 0
+    minValue: 0
+    defaultValue: 1
+    bonusValue: 0
+  attackBaseStats: []
+  attackBuffStats: []
+  projectile: {fileID: 0}

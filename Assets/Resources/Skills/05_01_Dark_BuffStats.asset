@@ -10,24 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ecd457d0acf50bb4bb6fff089ab41237, type: 3}
-  m_Name: Skill_04_Vitality
+  m_Name: 05_01_Dark_BuffStats
   m_EditorClassIdentifier: Assembly-CSharp::SkillTemplate
-  skillName: "\uCD5C\uB300\uCCB4\uB825 \uAC15\uD654"
+  skillName: Buff (Dark)
   skillType: 0
-  element: 3
-  maxLevel: 5
-  description: "\uCD5C\uB300\uCCB4\uB825 +200\n\uCD08\uB2F9 \uCCB4\uB825\uD68C\uBCF5
-    +20"
+  element: 4
+  maxLevel: 10
+  description: "\uCD08\uB2F9 \uCCB4\uB825 \uD68C\uBCF5\uB7C9 \uC99D\uAC00\n\uC77C\uBC18 \uACF5\uACA9\uC758 \uBC1C\uC0AC\uCCB4 \uAC1C\uC218 \uC99D\uAC00"
   enableIcon: {fileID: 21300000, guid: 469a01f30c650f949b2bb6c2c1aeb9d8, type: 3}
   disableIcon: {fileID: 21300000, guid: 0bbb187273c10344bb141ef43d6058ec, type: 3}
   buffStatList:
-  - statType: 4
-    maxValue: 9999
-    minValue: 0
-    defaultValue: 200
-    bonusValue: 0
   - statType: 7
-    maxValue: 9999
+    maxValue: 0
     minValue: 0
-    defaultValue: 20
+    defaultValue: 10
     bonusValue: 0
+  - statType: 8
+    maxValue: 0
+    minValue: 0
+    defaultValue: 1
+    bonusValue: 0
+  attackBaseStats: []
+  attackBuffStats: []
+  projectile: {fileID: 0}

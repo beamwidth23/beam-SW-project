@@ -10,18 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ecd457d0acf50bb4bb6fff089ab41237, type: 3}
-  m_Name: Skill_03_Evasion
+  m_Name: 04_01_Light_BuffStats
   m_EditorClassIdentifier: Assembly-CSharp::SkillTemplate
-  skillName: "\uD68C\uD53C\uC728 \uAC15\uD654"
+  skillName: Buff (Light)
   skillType: 0
-  element: 2
-  maxLevel: 5
-  description: "\uD68C\uD53C\uC728 +8%"
+  element: 3
+  maxLevel: 10
+  description: "\uC801 \uACF5\uACA9 \uD68C\uD53C \uD655\uB960 \uC99D\uAC00"
   enableIcon: {fileID: 21300000, guid: 051b1cb12c083a64a84c3a70c2347f47, type: 3}
   disableIcon: {fileID: 21300000, guid: c04bdefc36187a74997da6863ba2902e, type: 3}
   buffStatList:
   - statType: 5
-    maxValue: 1
+    maxValue: 0
     minValue: 0
-    defaultValue: 0.08
+    defaultValue: 0.09
     bonusValue: 0
+  attackBaseStats: []
+  attackBuffStats: []
+  projectile: {fileID: 0}
