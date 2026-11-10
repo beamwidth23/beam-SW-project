@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecd457d0acf50bb4bb6fff089ab41237, type: 3}
+  m_Name: 02_02_Fire_FireBall
+  m_EditorClassIdentifier: Assembly-CSharp::SkillTemplate
+  skillName: Fire Ball
+  skillType: 1
+  element: 1
+  maxLevel: 99
+  description: "\uBCBD\uC744 \uD1B5\uACFC\uD558\uACE0 \uB2E8\uC77C \uB300\uC0C1\uC744 \uCD94\uC801\uD558\uB294 \uD30C\uC774\uC5B4 \uBCFC \uBC1C\uC0AC"
+  enableIcon: {fileID: 21300000, guid: 73eec08e82182d9448c7c7984f30ab0a, type: 3}
+  disableIcon: {fileID: 21300000, guid: 9e04083fc44f4d2488811430bc2f3b61, type: 3}
+  buffStatList: []
+  attackBaseStats:
+  - statType: 0
+    maxValue: 9999
+    minValue: 300
+    defaultValue: 300
+    bonusValue: 0
+  - statType: 1
+    maxValue: 7
+    minValue: 3.5
+    defaultValue: 7
+    bonusValue: 0
+  - statType: 8
+    maxValue: 1
+    minValue: 1
+    defaultValue: 1
+    bonusValue: 0
+  attackBuffStats:
+  - statType: 0
+    maxValue: 0
+    minValue: 0
+    defaultValue: 150
+    bonusValue: 0
+  - statType: 1
+    maxValue: 0
+    minValue: 0
+    defaultValue: -0.1
+    bonusValue: 0
+  projectile: {fileID: 6926713422228510476, guid: c6040000000000000000000000000002, type: 3}
